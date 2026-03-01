@@ -18,4 +18,10 @@ one is 3rd party account
 * list out the table: `show tables;`
 * show the columns: `describe user_info;`
 
-### 
+### create a spring boot project
+#### create a Maven project  
+#### change to spring boot
+add relative dependencies of spring boot in pom.xml    
+(spring boot parent, spring boot starter(web, test), spring boot maven plugin)  
+create a main class  
+
