@@ -2,7 +2,7 @@
 
 ### system design: business logic, database
 #### log in logic: 
-one is mobile number + sms
+one is mobile number + sms  
 one is 3rd party account
 
 ### create a docker mysql, createt 2 tables, one is user_info, one is sms_code_verify
