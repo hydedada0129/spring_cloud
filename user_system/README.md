@@ -1,5 +1,10 @@
 # user_system service
-## docker container of mysql
+
+### system design: business logic, database
+#### log in logic: 
+one is mobile number + sms
+one is 3rd party account
+
 ### create a docker mysql, createt 2 tables, one is user_info, one is sms_code_verify
 * docker mysql image name : dev-mysql
 * launch by ubuntu terminal: `docker start dev-mysql`
@@ -12,3 +17,5 @@
 * sql command for creating table: `create table user_info(....);`
 * list out the table: `show tables;`
 * show the columns: `describe user_info;`
+
+### 
