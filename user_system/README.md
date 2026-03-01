@@ -18,10 +18,42 @@ one is 3rd party account
 * list out the table: `show tables;`
 * show the columns: `describe user_info;`
 
-### create a spring boot project
+
+### project environment
 #### create a Maven project  
 #### change to spring boot
 add relative dependencies of spring boot in pom.xml    
 (spring boot parent, spring boot starter(web, test), spring boot maven plugin)  
 create a main class  
 
+### configuration yml
+/src/main/resources/application.yml  
+config: spring service's name, server's port  
+
+### MyBatis: database access framework
+#### add mybatis dependency 
+pom.xml  
+
+#### add mysql driver, connection pool(druid)
+pom.xml  
+
+#### add datasource configuration in application.yml
+
+### Redis - for save Token
+#### docker Redis, redis-cli
+
+#### add redis dependency, service connects to redis configuration 
+pom.xml  
+application.yml
+
+### implement business logic
+#### controller, service, DAO  
+
+## spring boot to spring cloud
+### service registration center: Consul
+in real world, create cluster deployment  
+but here create a single Consul  
+
+#### Docker for Consul
+
+#### change to spring cloud
