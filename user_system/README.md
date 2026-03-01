@@ -1,6 +1,6 @@
 # user_system service
 ## docker container of mysql
-### create a docker mysql
+### create a docker mysql, createt 2 tables, one is user_info, one is sms_code_verify
 * docker mysql image name : dev-mysql
 * launch by ubuntu terminal: `docker start dev-mysql`
 * list the docker container: `docker ps`
