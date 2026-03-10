@@ -56,7 +56,7 @@ application.yml
 ### implement business logic
 #### controller, service, DAO  
 ##### controller: only receives request
-##### service: handle request (handle logic)
+##### service: handle request (executing logic)
 service to service portocol (HTTP, Spring MVC): 
 
 Controller(encapsulate the request into object and pass it to service layer):  
