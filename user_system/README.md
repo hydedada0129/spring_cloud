@@ -20,7 +20,8 @@ one is 3rd party account
 
 
 ### project environment
-#### create a Maven project  
+#### create a Maven project (simple maven project)
+
 #### change to spring boot
 add relative dependencies of spring boot in pom.xml    
 (spring boot parent, spring boot starter(web, test), spring boot maven plugin)  
@@ -35,12 +36,18 @@ config: spring service's name, server's port
 pom.xml  
 
 #### add mysql driver, connection pool(druid)
-pom.xml  
+pom.xml   
+<scope>runtime  
+because spring boot loads JDBC driver as runtime  
 
 #### add datasource configuration in application.yml
+mysql, Druid config  
 
 ### Redis - for save Token
 #### docker Redis, redis-cli
+after installed, test it :  
+set a 123  
+get a
 
 #### add redis dependency, service connects to redis configuration 
 pom.xml  
@@ -48,6 +55,17 @@ application.yml
 
 ### implement business logic
 #### controller, service, DAO  
+service to service portocol (HTTP, Spring MVC): 
+
+Controller(encapsulate the request into object and pass it to service layer):  
+/user/getSmsCode  
+/user/logiByMobile  
+/user/loginExit  
+
+
+
+
+
 
 ## spring boot to spring cloud
 ### service registration center: Consul
