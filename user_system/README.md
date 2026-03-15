@@ -64,9 +64,43 @@ Controller(encapsulate the request into object and pass it to service layer):
 /user/logiByMobile  
 /user/loginExit  
 
+VO(Value Object):  
+前端透過 HTTP 傳送資料（例如 JSON 格式或表單參數）時，這些資料在本質上是分散的字串或數值。  
+透過 VO，你可以將這些碎片化的資訊整合進一個結構化的 Java 物件中  
 
+@Autowired annotation:  
+我需要這個工具, Spring將會幫忙new物件的處理  
+確保一個類別在整個應用程式運行期間，**只有一個實例（Instance）**存在。  
 
+控制反轉 (IoC, Inversion of Control):  
+原本由開發者主導的物件掌控權，轉交給了外部容器（如 Spring）  
 
+Mock（模擬）物件:  
+在單元測試中非常重要的技術  
+隔離環境：當你想測試 UserController 的邏輯時，你不想真的連上 MySQL 或是扣掉簡訊點數，這時就可以用 Mock 的 UserSmsCodeDao 代替  
+
+單元測試:  
+使用 Spring Boot 內建的 JUnit 5 搭配 Mockito 框架  
+
+##### DAO, MyBatis, yml
+1.建立DAO
+2.MyBatis Mapper XML(把 Java DAO method 對應到 SQL):  
+在Eclipse下載外部DTD(Document Type Definition  
+约束其核心配置文件和映射文件（Mapper XML）的结构、标签和属性，确保 XML 的有效性)
+時會報錯, 即使設定：
+勾選 Resolve external entities
+改成 https
+設定 Ignore
+錯誤訊息依然存在, 但  
+  1.MyBatis 會自己解析 XML  
+  2.不需要 Eclipse 的 validator  
+所以可以忽略.  
+
+在Mapper XML中：  
+#{}  → PreparedStatement（安全）  
+
+3.Spring Boot 啟動時需要知道去哪裡把這兩者綁在一起:  
+bootstrap.yml要在spring cloud專案才能被讀取到. 因此要引入spring cloud的context依賴.  
 
 
 ## spring boot to spring cloud
