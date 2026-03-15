@@ -75,16 +75,9 @@ VO(Value Object):
 控制反轉 (IoC, Inversion of Control):  
 原本由開發者主導的物件掌控權，轉交給了外部容器（如 Spring）  
 
-Mock（模擬）物件:  
-在單元測試中非常重要的技術  
-隔離環境：當你想測試 UserController 的邏輯時，你不想真的連上 MySQL 或是扣掉簡訊點數，這時就可以用 Mock 的 UserSmsCodeDao 代替  
-
-單元測試:  
-使用 Spring Boot 內建的 JUnit 5 搭配 Mockito 框架  
-
 ##### DAO, MyBatis, yml
-1.建立DAO
-2.MyBatis Mapper XML(把 Java DAO method 對應到 SQL):  
+1.建立interface DAO
+2.建立MyBatis Mapper XML(把 Java DAO method 對應到 SQL):  
 在Eclipse下載外部DTD(Document Type Definition  
 约束其核心配置文件和映射文件（Mapper XML）的结构、标签和属性，确保 XML 的有效性)
 時會報錯, 即使設定：
@@ -99,14 +92,23 @@ Mock（模擬）物件:
 在Mapper XML中：  
 #{}  → PreparedStatement（安全）  
 
-3.Spring Boot 啟動時需要知道去哪裡把這兩者綁在一起:  
-bootstrap.yml要在spring cloud專案才能被讀取到. 因此要引入spring cloud的context依賴.  
+3.Spring Boot 啟動時需要知道去哪裡把這兩者綁在一起:   application.yml加入mybatis XML路徑  
 
+建立bootstrap.yml:  
+bootstrap.yml要在spring cloud專案才能被讀取到. 因此要引入spring cloud的context依賴.  
 
 ## spring boot to spring cloud
 ### service registration center: Consul
 in real world, create cluster deployment  
-but here create a single Consul  
+but here create a single Consul    
+
+### Test:
+Mock（模擬）物件:  
+在單元測試中非常重要的技術  
+隔離環境：當你想測試 UserController 的邏輯時，你不想真的連上 MySQL 或是扣掉簡訊點數，這時就可以用 Mock 的 UserSmsCodeDao 代替  
+
+單元測試:  
+使用 Spring Boot 內建的 JUnit 5 搭配 Mockito 框架  
 
 #### Docker for Consul
 
