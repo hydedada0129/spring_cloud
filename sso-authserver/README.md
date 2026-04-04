@@ -18,3 +18,4 @@ web console:http://127.0.0.1:8500
 啟動微服務  
 看到console訊息：Registering service with consul表示註冊consul成功  
 開啟browser http://127.0.0.1:8500
+##### 完成以上步驟，就完成微服務架設
