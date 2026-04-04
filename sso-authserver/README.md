@@ -5,7 +5,8 @@ Consul discovery, 限流熔斷, 健康性檢查, 公共程式
 但Spring Boot不自動載入bootstrap, 需要pom另外引入
 <plugin>,<resource>
 ### Entry Class
-@SpringBootApplication  
+@SpringBootApplication    
+@EnableDiscoveryClient  
 
 ## 
 
