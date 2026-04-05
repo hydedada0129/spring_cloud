@@ -1,6 +1,6 @@
 ## OAuth 2.0 的4種角色：
 #### Clinet (用戶端)：第三方App端 (ex: Momo購物)，這裡的用戶端不是使用者
-#### Resource Owner : 使用者
+#### Resource Owner : 使用者（ex: 微信使用者）
 #### Resource Server : 受保護資源提供者 (ex: 微信， FB, Google)，儲存使用者資訊的伺服器
 #### Authorizstion Server : 授權認證平台（有時候可以與Resource Server是同一個平台，如：微信開發平台）
 
